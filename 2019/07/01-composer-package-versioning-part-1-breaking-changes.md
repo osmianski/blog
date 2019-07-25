@@ -40,4 +40,4 @@ As it is the library developer who have to tell the project developer if library
 
 In the next part, I will review how to keep up with semantic versioning using Git.
 
-[Discuss on HN](#)
+[Discuss on HN](https://news.ycombinator.com/item?id=20527677)
