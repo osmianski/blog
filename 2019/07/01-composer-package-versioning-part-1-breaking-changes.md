@@ -10,7 +10,7 @@ Contents:
 
 ## To Update Or Not To Update ##
 
-Let's say some you develop a PHP project using PHP library `some/library`, developed by someone else:
+Let's say you develop a PHP project using PHP library `some/library`, developed by someone else:
 
 	project --> some/library  
 
@@ -24,11 +24,11 @@ Versioning helps you with this decision:
 
 ## Communicating Breaking Changes ##
 
-Updates which may break the project is called **breaking changes**.
+Updates which may break the project are called **breaking changes**.
 
 As it is the library developer who have to tell the project developer if library version contains breaking changes or not, let's see the same situation from the library developer point of view. 
 
-[Semantic Versioning](https://semver.org/) offers you as the library developer a clear set of rules for communicating breaking changes. Short version:
+[Semantic Versioning](https://semver.org/) offers you as the library developer a clear set of rules for communicating breaking changes. Summary:
 
 * Assign every new version of the library `X.Y.Z` version number where `X` - is major version, `Y` is minor version and `Z` is patch number.
 * When you release new package version (let's say that current version is `1.0.0`) you communicate to users of your library using one of 3 messages:
