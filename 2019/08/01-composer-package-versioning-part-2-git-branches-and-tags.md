@@ -2,7 +2,7 @@
 
 This is the second article on Composer package versioning. 
 
-[The first article](../07/composer-package-versioning-part-1-breaking-changes.html) introduced the concept of breaking changes and semantic versioning as a way of communicating the risk of breaking changes.
+[The first article](../07/composer-package-versioning-part-1-breaking-changes.html) introduced the concept of breaking changes and semantic versioning as a way of communicating the risk of breaking changes to the user of your Composer package.
 
 This article reviews how to keep up with semantic versioning using Git.
 
@@ -12,13 +12,13 @@ Contents:
 
 ## Git Branches ##
  
-After you created new package put under Git, you only have `master` branch. Develop next major or minor release on `master` branch.
+After you created new Composer package and put it under Git, you have only `master` branch. Develop next major or minor release on `master` branch.
 
 After major or minor release create a new **release branch** pointing to the last patch for that release. Name such branches using version number of the release: `0.1.x`, `1.0.x`, `1.1.x`, `1.2.x` etc. 
 
 Keep release branch as long as you support that version. After version, say, `1.0` is no longer supported (see [Support Window](#support-window)), delete `1.0.x` branch.   
 
-Developing patch on the oldest release branch the patch is applicable to. After patch development is finished, merge or rebase the patch to all newer release branches it is applicable to.
+Develop patch on the oldest release branch the patch is applicable to. After patch development is finished, merge or rebase the patch to all newer release branches (and to `master` branch) it is applicable to.
    
 This Git branching model is illustrated below:
 
@@ -30,7 +30,7 @@ Tag last commit of major, minor or patch release with a version number prefixed 
 
 ## Upgrade Guides ##
 
-Document and publish all the breaking changes with every release as step-by-step upgrade guide. Address 2 types of readers:
+Document and publish all the breaking changes with every release as step-by-step upgrade guide. Address two types of readers:
 
 * those who use public methods and functions
 * those who extend your classes and hence use protected variables and methods  
@@ -59,6 +59,6 @@ As package matures, you may offer users more convenient support window by markin
 
 ## What's Next ##
 
-The next part will provide step-by-step guide for supporting this Git branching model in shell.
+The next part will provide step-by-step guide for working with this Git branching model in shell.
 
 [Discuss on HN]()     
