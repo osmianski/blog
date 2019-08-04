@@ -59,6 +59,6 @@ As package matures, you may offer users more convenient support window by markin
 
 ## What's Next ##
 
-The next part will provide step-by-step guide for supporting this Git branching model in command line.
+The next part will provide step-by-step guide for supporting this Git branching model in shell.
 
 [Discuss on HN]()     
