@@ -61,4 +61,4 @@ As package matures, you may offer users more convenient support window by markin
 
 The next part will provide step-by-step guide for working with this Git branching model in shell.
 
-[Discuss on HN]()     
+[Discuss on HN](https://news.ycombinator.com/item?id=20605961)     
