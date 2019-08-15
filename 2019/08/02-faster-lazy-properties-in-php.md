@@ -130,4 +130,4 @@ Practical use of "magic" lazy properties is subject for discussion:
 	    $property->setAccessible(true);
 	    $property->setValue($object, 'unexpected'); 
 
-Post your test results or [discuss this post on HN]().
+Post your test results or discuss this post [on Hacker News](https://news.ycombinator.com/item?id=20703888) or [on GitHub](https://github.com/osmianski/blog).
