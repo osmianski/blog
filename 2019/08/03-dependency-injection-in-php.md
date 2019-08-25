@@ -242,4 +242,4 @@ To sum up:
 
 The next article will describe shortcomings of dependency injection and it will provide alternative approach.
 
-Discuss this post [on Hacker News]() or [on GitHub](https://github.com/osmianski/blog).    
+Discuss this post [on Hacker News](https://news.ycombinator.com/item?id=20791984) or [on GitHub](https://github.com/osmianski/blog).    
