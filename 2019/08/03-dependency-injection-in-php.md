@@ -249,3 +249,4 @@ To sum up:
 The next articles will describe imperfections of dependency injection and propose alternative approach.
 
 Discuss this post [on Reddit]() or [get in touch](https://github.com/osmianski).    
+
