@@ -250,6 +250,3 @@ The next articles will describe imperfections of dependency injection and propos
 
 Discuss this post [on Reddit]() or [get in touch](https://github.com/osmianski).    
 
-
-
-
