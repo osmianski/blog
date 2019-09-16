@@ -1,10 +1,14 @@
 # Dependency Injection In PHP #
 
-Managing class dependencies is important part of object-oriented programming. 
+Dependency injection is considered a standard practice for better code readability, testability and reuse.
+ 
+Through years of using dependency injection and really enjoying it, I was also bothered with certain inconvenience and possible effect on performance. Recently, I tried using another approach for managing dependencies which, still giving the benefits of dependency injection, doesn't have its drawbacks.
 
-This post describes why class dependencies are important, what the [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) is and what are the benefits of using it for managing class dependencies.
+This post describes why managing class dependencies are important, what the [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) is and the benefits of using it for managing class dependencies.
 
-The follow-up article will describe shortcomings of dependency injection and it will provide alternative approach.
+The follow-up articles will describe shortcomings of dependency injection and alternative approach.
+
+I hope you'll find it useful.
 
 Contents:
 
@@ -34,6 +38,8 @@ Classes with less dependencies are:
 
 * **More maintainable**. In order to understand class inner workings, you have to know what its dependencies do, so minimizing number of dependencies makes class code easier to read.  
 * **More reusable**. Reusing a class in another project requires all its dependencies working properly in that project as well, so with less dependencies less preparation is needed. 
+
+## Optimizing Dependencies ##
 
 Optimizing class dependencies involves finding a balance between:
 
@@ -240,6 +246,6 @@ To sum up:
 * class testability is important;
 * DI provides a solid approach for managing class dependencies and writing testable code.
 
-The next article will describe shortcomings of dependency injection and it will provide alternative approach.
+The next articles will describe imperfections of dependency injection and propose alternative approach.
 
-Discuss this post [on Hacker News](https://news.ycombinator.com/item?id=20791984) or [on GitHub](https://github.com/osmianski/blog).    
+Discuss this post [on Reddit]() or [get in touch](https://github.com/osmianski).    
