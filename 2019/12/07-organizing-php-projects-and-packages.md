@@ -4,6 +4,8 @@ In my recent PHP projects, in addition to developing project-specific source-cod
 
 After organizing directories, Git repositories and workflow ad-hoc for quite some time, I think now it's time to reflect and document some "standard" way of doing that. It is also useful to document solutions to the certain problems I constantly run into.
 
+That's what this article is about.
+
 This article assumes a basic knowledge of [Git](https://git-scm.com/), [Composer](https://getcomposer.org/) and [semantic versioning](https://semver.org/).
 
 Contents:
