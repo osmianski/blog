@@ -129,7 +129,7 @@ In `production` environment, both library packages are on a version tag matching
     * merge the latest `vX` into `master`
 * In `production` environment, pull `production` branch and run `composer update`
 
-## Setup Modifications
+## Setup Variations
 
 1. You can use `vX` environment in production and don't have `production` branch at all. In this case the production environment is on `vX` branches of the project and library packages, not on specific version tags. Less safety, but faster deployment.
 
