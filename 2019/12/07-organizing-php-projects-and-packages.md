@@ -63,53 +63,79 @@ for `osmdocs.com` project, I have several environments:
 
 For Web projects, use environment name as a Web domain name.
 
-## Composer Dependencies
+## Dependency Setup
 
-Configure `composer.json` in each environment differently. Continuing with the previous example:
+Configure `composer.json` in each environment differently. Continuing with the previous example, below are typical setups of every environment.
 
-* In `master.osmdocs.com` environment, two library packages the project uses are also on `master` branch. Here is how it is configured in `composer.json` files:
+### `master` Environment
 
-        // project's composer.json
-        "require": {
-            "osmphp/docs": "dev-master@dev",
-            "osmphp/framework": "dev-master@dev"
-        }
+In `master` environment, two library packages the project uses are also on `master` branch. Here is how it is configured in `composer.json` files:
 
-        // docs's composer.json
-        "require": {
-            "osmphp/framework": "dev-master"
-        }
+    // project's composer.json
+    "require": {
+        "osmphp/docs": "dev-master@dev",
+        "osmphp/framework": "dev-master@dev"
+    }
 
-        // no require section in framework's composer.json
+    // docs's composer.json
+    "require": {
+        "osmphp/framework": "dev-master"
+    }
 
-* In `v1.osmdocs.com` environment, both library packages are on `vX` branch of versions currently used in production (in the example below, on `v3` branch):
+    // no require section in framework's composer.json
 
-        // project's composer.json
-        "require": {
-            "osmphp/docs": "v3.x-dev",
-            "osmphp/framework": "v3.x-dev"
-        }
+### `vX` Environments
 
-        // docs's composer.json
-        "require": {
-            "osmphp/framework": "v3.x-dev"
-        }
+In `v1` environment, both library packages are on `vX` branch of versions currently used in production (in the example below, on `v3` branch):
 
-        // no require section in framework's composer.json
+    // project's composer.json
+    "require": {
+        "osmphp/docs": "v3.x-dev",
+        "osmphp/framework": "v3.x-dev"
+    }
 
-* In `production.osmdocs.com` environment, both library packages are on a version tag matching specified version constraint:
+    // docs's composer.json
+    "require": {
+        "osmphp/framework": "v3.x-dev"
+    }
 
-        // project's composer.json
-        "require": {
-            "osmphp/docs": "^3.0"
-        }
+    // no require section in framework's composer.json
 
-        // docs's composer.json
-        "require": {
-            "osmphp/framework": "^3.0"
-        }
+### `production` Environment
 
-        // no require section in framework's composer.json
+In `production` environment, both library packages are on a version tag matching specified version constraint:
+
+    // project's composer.json
+    "require": {
+        "osmphp/docs": "^3.0"
+    }
+
+    // docs's composer.json
+    "require": {
+        "osmphp/framework": "^3.0"
+    }
+
+    // no require section in framework's composer.json
+
+## Workflow
+
+* In `master` environment, do all the major development. When ready:
+    * if release is major, create new `vX` environment from `master`
+    * if release is minor, merge into existing `vX` environment
+* In `vX` environment, develop hotfixes. When ready:
+    * merge project file changes into `production`
+    * create new version tags in modified library packages
+    * merge `vX` into `v(X+1)`
+    * merge the latest `vX` into `master`
+* In `production` environment, pull `production` branch and run `composer update`
+
+## Setup Modifications
+
+1. You can use `vX` environment in production and don't have `production` branch at all. In this case the production environment is on `vX` branches of the project and library packages, not on specific version tags. Less safety, but faster deployment.
+
+2. In initial stage of the project development, you may omit `vX` branches and deploy `master` branches to the production environment.
+
+3. If you don't need active previous versions of the project, you may have a single `v1` branch in project's Git repository and not create `v2` even in case incoming breaking changes.
 
 ## Common Pitfalls
 
