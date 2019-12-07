@@ -1,20 +1,20 @@
 # Composer Package Versioning - Part 1 - Breaking Changes #
 
-This article series is about software versioning. This is the first, introductory article in the series. 
+This article series is about software versioning. This is the first, introductory article in the series.
 
 Contents:
 
 {{ toc }}
 
-> **Note**. Examples in this series are tailored for PHP, [Composer](https://getcomposer.org/) and [Git](https://git-scm.com/), though same principles apply to other programming languages and version control systems as well.  
+> **Note**. Examples in this series are tailored for PHP, [Composer](https://getcomposer.org/) and [Git](https://git-scm.com/), though same principles apply to other programming languages and version control systems as well.
 
 ## To Update Or Not To Update ##
 
 Let's say you develop a PHP project using PHP library `some/library`, developed by someone else:
 
-	project --> some/library  
+	project --> some/library
 
-As `some/library` evolves (bugs are getting fixed, new features are introduced), you face a dilemma: installing `some/library` updates may benefit the project, but it may also break the project. 
+As `some/library` evolves (bugs are getting fixed, new features are introduced), you face a dilemma: installing `some/library` updates may benefit the project, but it may also break the project.
 
 Versioning helps you with this decision:
 
@@ -26,7 +26,7 @@ Versioning helps you with this decision:
 
 Updates which may break the project are called **breaking changes**.
 
-As it is the library developer who have to tell the project developer if library version contains breaking changes or not, let's see the same situation from the library developer point of view. 
+As it is the library developer who have to tell the project developer if library version contains breaking changes or not, let's see the same situation from the library developer point of view.
 
 [Semantic Versioning](https://semver.org/) offers you as the library developer a clear set of rules for communicating breaking changes. Summary:
 
@@ -41,3 +41,5 @@ As it is the library developer who have to tell the project developer if library
 [In the next part](../08/composer-package-versioning-part-2-git-branches-and-tags.html), I will review how to keep up with semantic versioning using Git.
 
 [Discuss on HN](https://news.ycombinator.com/item?id=20527677)
+
+**Update**. Composer package versioning topic is also covered in [Organizing PHP Projects And Packages](../12/organizing-php-projects-and-packages.html).
