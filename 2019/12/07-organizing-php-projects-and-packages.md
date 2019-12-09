@@ -61,7 +61,7 @@ for `osmdocs.com` project, I have several environments:
 * `v1.osmdocs.com`
 * `production.osmdocs.com`
 
-For Web projects, use environment name as a Web domain name.
+For Web projects, environment name = Web domain.
 
 ## Dependency Setup
 
