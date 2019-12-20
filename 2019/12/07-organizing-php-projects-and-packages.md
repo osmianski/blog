@@ -96,7 +96,7 @@ In `v1` environment, both library packages are on `vX` branch of versions curren
 
     // docs's composer.json
     "require": {
-        "osmphp/framework": "v3.x-dev"
+        "osmphp/framework": "^3.0"
     }
 
     // no require section in framework's composer.json
